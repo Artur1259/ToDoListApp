@@ -16,7 +16,7 @@ function TodoList({
     const checkedItems = todos.filter((todo) => todo.completed).length;
     
   return (
-    <div>
+    <div className="overflow-y-auto max-h-[400px] custom-scrollbar">
       {todos.map((todo) =>
         todo.isEdit ? (
           <EditedTodo
