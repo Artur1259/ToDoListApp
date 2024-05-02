@@ -54,6 +54,7 @@ function App() {
     setTodos(
       todos.map(todo =>{
         if(todo.id === newTodo.id){
+          console.log(newTodo)
           return newTodo;
         }
         else{

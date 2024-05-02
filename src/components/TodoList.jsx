@@ -26,12 +26,12 @@ function TodoList({
             task={todo}
           />
         ) : (
-          <div key={Math.random() * 10000} className="px-8 py-1">
+          <div key={Math.floor(Math.random() * 10000)} className="px-8 py-1">
             <div className="border rounded-md p-2 bg-slate-200 flex justify-between items-center">
               <div>
                 <input
                   type="checkbox"
-                  checked={todos.completed}
+                  checked={todo.completed}
                   onChange={(e) =>
                     onCompleted({
                       ...todo,
