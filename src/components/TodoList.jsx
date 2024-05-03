@@ -9,19 +9,16 @@ function TodoList({
   onCompleted,
   clearCompletedItems,
   editItem,
-  editTask,
-  editItemTodo
+  editItemTodo,
 }) {
-  
-    const checkedItems = todos.filter((todo) => todo.completed).length;
-    
+  const checkedItems = todos.filter((todo) => todo.completed).length;
+
   return (
     <div className="overflow-y-auto max-h-[400px] custom-scrollbar">
       {todos.map((todo) =>
         todo.isEdit ? (
           <EditedTodo
             key={todo.id}
-            editTask={editTask}
             editItemTodo={editItemTodo}
             task={todo}
           />

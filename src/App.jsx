@@ -77,16 +77,11 @@ function App() {
   const clearCompletedItems = () => {
     setTodos(todos.filter((todo)=> !todo.completed));
   };
-  const editTask = (id,task) => {
-    setTodos(todos.map((todo)=>{
-        todo.id = id ? {...todo, task, isEdit: !todo.isEdit} :todo
-    }));
-  }
   return (
     <div className="w-full h-screen flex justify-center items-center px-10 bg-gradient-to-r from-[#2f80ed] via-[#1cb5e0] to-[#2f80ed] ">
       <div className="bg-slate-300/85 rounded-lg max-w-[700px] w-full py-5">
         <TodoInput addTodoItem={addTodoItem}/>
-        <TodoList todos={todos} deleteTodo={deleteTodo} onCompleted={onCompleted} clearCompletedItems={clearCompletedItems} editItem={editItem} editTask={editTask} editItemTodo={editItemTodo}/>
+        <TodoList todos={todos} deleteTodo={deleteTodo} onCompleted={onCompleted} clearCompletedItems={clearCompletedItems} editItem={editItem} editItemTodo={editItemTodo}/>
       </div>
     </div>
   );
